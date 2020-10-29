@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Modal Support -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- Tooltip Support -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body class="is-preload">
 
@@ -115,6 +117,7 @@
               <span>Länge in m</span>
               <input
                 type="number"
+                title="Länge zwischen 1m und 10m"
                 step="0.5"
                 name="length"
                 id="length"
@@ -128,6 +131,7 @@
               <span>Breite in m</span>
               <input
                 type="number"
+                title="Breite zwischen 1m und 10m"
                 step="0.5"
                 name="width"
                 id="width"
@@ -141,6 +145,7 @@
               <span>Höhe in m</span>
               <input
                 type="number"
+                title="Höhe zwischen 1m und 5m"
                 step="0.5"
                 name="height"
                 id="height"
@@ -152,12 +157,13 @@
             </div>
             <div class="col-3 col-12-xsmall">
               <span>Volumen in m<sup>3</sup></span>
-              <input type="number" name="volume" id="volume" readonly="readonly
+            <input type="number" title="Das Raumvolumen wird automatisch berechnet" name="volume" id="volume" readonly="readonly
               value="" placeholder="Volumen" />
             </div>
           </div>
           <h3>Anzahl der gesunden Personen im Raum (zusätzlich zur infizierten Person)</h3>
-          <input type="number" step="1" name="people" id="people" value="3" min="0" max="100" placeholder="Personenanzahl"/>
+        <input type="number" title="Maximal 100 Personen" step="1" name="people" id="people" value="5" min="0" max="100"
+            placeholder="Personenanzahl" />
           <h3>Aktivität</h3>
           <select id="activity" name="activity">
             <option value="low_activity" selected="selected">Sitzen, Stehen oder Sprechen</option>
@@ -258,14 +264,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <!-- Modal Support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <!-- Tooltip Support -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- Our own bundle -->
     <script src="bundle.js"></script>
     <script>
+                                                                                            $(function () {
+                                                                                                $(document).tooltip();
+                                                                                            });
       $('#disclaimer').modal({
         escapeClose: false,
         clickClose: false,
         showClose: false
       });
+
     </script>
   </body>
 </html>
