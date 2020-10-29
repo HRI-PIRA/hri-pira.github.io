@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COVID-19 Infektionsrisiko durch Aerosole</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Modal Support -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  </head>
+  <body class="is-preload">
+
+    <!-- Disclaimer Modal -->
+    <div id="disclaimer" class="modal" style="max-width: 1000px; text-align: center;">
+      <p>
+        Dieses Tool kann dazu beitragen, das Infektionsrisiko über Aerosole in Innenräumen vorauszusagen. 
+        Die Berechnungen basieren auf der gemeinsamen Veröffentlichung <a href="https://doi.org/10.1101/2020.10.08.20209106">Predicted Infection Risk for Aerosol Transmission of SARS-CoV-2</a> von Wissenschaftlern der Technischen Universität Berlin, der Charité, dem Robert-Koch-Institut und 
+        einem Gesundheitsamt in Berlin [x].
+      </p>
+      <p>
+        Alle Angaben sind ohne Gewähr. Für die hier dargestellten vorausgesagten Infektionsrisiken wird keine Haftung übernommen. 
+      </p>
+      <a class="button primary" href="#" rel="modal:close">Verstanden</a>
+    </div>
+
+    <!-- Air Modal -->
+    <div id="airexplanation" class="modal" style="max-width: 1000px; text-align: center;">
+        <p>
+            Die Beurteilung der Belüftung (von sehr schlecht bis sehr gut) werden nach den anerkannten Regeln der Technik 
+            in Abhängigkeit sämtlicher sich im Raum befindenden Personen bestimmt. 
+            Jede Person benötigt Frischluft (z.B. Sauerstoff) und verbraucht diese. 
+            Es entsteht Kohlendioxid (CO<sub>2</sub>), das in hohen Konzentrationen toxisch wirkt. 
+            Die Konzentration an CO<sub>2</sub> hängt von der Personenanzahl und der Frischluftmenge ab. 
+            Es werden folgende Frischluftmengen pro anwesende Person für die Bewertung angenommen, die dann auch zu den 
+            mitangegebenen CO<sub>2</sub> Konzentrationen im Raum resultieren. 
+        </p>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Belüftung</th>
+                        <th>Frischluftmenge pro Person</th>
+                        <th>CO<sub>2</sub> Konzentration bei Sitzen/Stehen/Sprechen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sehr Schlecht</td>
+                        <td>10 m<sup>3</sup>/h</td>
+                        <td>2500 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Schlecht</td>
+                        <td>20 m<sup>3</sup>/h</td>
+                        <td>1500 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Mäßig</td>
+                        <td>30 m<sup>3</sup>/h</td>
+                        <td>1200 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Gut</td>
+                        <td>40 m<sup>3</sup>/h</td>
+                        <td>1000 ppm</td>
+                    </tr>
+                    <tr>
+                        <td>Sehr Gut</td>
+                        <td>60 m<sup>3</sup>/h</td>
+                        <td>800 ppm</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        <a class="button primary" href="#" rel="modal:close">OK</a>
+    </div>
+
+
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>COVID-19 Infektionsrisiko durch Aerosole</h1>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- First Section -->
+        <section id="intro" class="main">
+          <div class="spotlight">
+            <div class="content">
+              <p>
+                Zu Beginn betritt eine mit SARS-CoV-2 infizierte Person einen Raum. 
+                Der Raum wird entsprechend den verschiedenen Kategorien belüftet (von sehr schlecht bis sehr gut). 
+                Es gehen zum gleichen Zeitpunkt die angegebene Anzahl von gesunden Personen ebenfalls in den Raum, 
+                oder sie befinden sich beim Betreten der infizierten Person bereits im Raum. 
+                Das ist für die Virenbelastung im Raum nicht relevant, da diese Personen alle gesund sind und 
+                nur die sich einstellende Virenlast entscheidend für das vorhergesagte Infektionsrisiko ist, 
+                die nur von der infizierten Person ausgeht. 
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- First Section -->
+        <section id="first" class="main special">
+          <h3>Raumvolumen</h3>
+          <div class="row gtr-uniform">
+            <div class="col-3 col-12-xsmall">
+              <span>Länge in m</span>
+              <input
+                type="number"
+                step="0.5"
+                name="length"
+                id="length"
+                value="5"
+                placeholder="Länge"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="col-3 col-12-xsmall">
+              <span>Breite in m</span>
+              <input
+                type="number"
+                step="0.5"
+                name="width"
+                id="width"
+                value="4"
+                placeholder="Breite"
+                min="1"
+                max="10"
+              />
+            </div>
+            <div class="col-3 col-12-xsmall">
+              <span>Höhe in m</span>
+              <input
+                type="number"
+                step="0.5"
+                name="height"
+                id="height"
+                value="3"
+                placeholder="Höhe"
+                min="1"
+                max="5"
+              />
+            </div>
+            <div class="col-3 col-12-xsmall">
+              <span>Volumen in m<sup>3</sup></span>
+              <input type="number" name="volume" id="volume" readonly="readonly
+              value="" placeholder="Volumen" />
+            </div>
+          </div>
+          <h3>Anzahl der gesunden Personen im Raum (zusätzlich zur infizierten Person)</h3>
+          <input type="number" step="1" name="people" id="people" value="3" min="0" max="100" placeholder="Personenanzahl"/>
+          <h3>Aktivität</h3>
+          <select id="activity" name="activity">
+            <option value="low_activity" selected="selected">Sitzen, Stehen oder Sprechen</option>
+            <option value="singing">Singen</option>
+            <option value="mid_activity">Physische Arbeit</option>
+            <option value="sports">Sport</option>
+          </select>
+          <div class="simple">
+            <h3>Belüftung <a href="#airexplanation" rel="modal:open">?</a></h3>
+            <select id="air" name="air">
+                <option value="very_bad">Sehr Schlecht Belüftet</option>
+                <option value="bad">Schlecht Belüftet</option>
+                <option value="ok">Mäßig Belüftet</option>
+                <option value="good" selected="selected">Gut Belüftet</option>
+                <option value="very_good">Sehr gut Belüftet</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="explainer" class="main">
+            <div class="spotlight">
+              <div class="content">
+                <p>
+                  Infektionsrisiko bedeutet in dem hier betrachteten Zusammenhang das individuelle Risiko einer gesunden Person, 
+                  an Covid-19 zu erkranken. Es wird auf der linken Seite das Risiko in Prozent und auf der rechten 
+                  Achse die Personenanzahl dargestellt, die sich sehr wahrscheinlich mit SARS-CoV-2 infizieren würden. 
+                  Diese Anzahl wird aus dem Risiko in % und der Anzahl der gesunden Personen im Raum berechnet. 
+                </p>
+              </div>
+            </div>
+          </section>
+
+        <!-- Second Section -->
+        <section id="second" class="main special">
+          <div id="chart" style="width: 100%; min-height: 70vh"></div>
+          <select id="mode" name="mode">
+              <option value="simple">Einfache Darstellung</option>
+              <option value="expert">Experten Darstellung</option>
+          </select>
+          <!-- <select class="expert" id="vistype" name="vistype" style="display:none">
+            <option value="contour">Statische Visualisierung</option>
+            <option value="surface">Interaktive Visualisierung</option>
+          </select> -->
+        </section>
+
+        <!-- Explaination general -->
+        <section class="main">
+          <div class="spotlight">
+            <div class="content">
+              <header class="major">
+                <h2>Erläuterungen</h2>
+              </header>
+              <p>
+                Die virenbeladenen Partikel aus den Atemwegen der infizierten Person verteilen sich unmittelbar im gesamten Raum. 
+                Diese Annahme kann getroffen werden, weil sich derartige Schwebteilchen in kurzer Zeit (in ein paar Minuten) 
+                überall im Raum verteilen. In Realität schweben die luftgetragenen Partikel (inkl. der anhaftenden Viren) 
+                in Abhängigkeit der Raumluftströmung sehr unterschiedlich und es entstehen Gebiete, die weniger Virenlast als andere haben. 
+              </p>
+              <p>
+                Die dem Raum zugeführte virenfreie Luft vermischt sich unmittelbar mit der Raumluft und verteilt sich im gesamten Raum. 
+                Diese Annahme ist sehr vereinfacht. In der Realität stellt sich in Abhängigkeit von sehr vielen Faktoren 
+                eine Raumluftströmung ein, die nicht stabil ist. In dem betrachteten Fall wird davon ausgegangen, 
+                dass der Raum durch die verschiedenen Einflüsse ideal durchmischt wird. 
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright">
+          &copy;
+          <a href="https://www.tu.berlin/en/">Technische Universität Berlin</a>
+          2020.
+        </p>
+      </footer>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-1.56.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <!-- Modal Support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <!-- Our own bundle -->
+    <script src="bundle.js"></script>
+    <script>
+      $('#disclaimer').modal({
+        escapeClose: false,
+        clickClose: false,
+        showClose: false
+      });
+    </script>
+  </body>
+</html>
