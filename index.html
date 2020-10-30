@@ -172,7 +172,7 @@
             <option value="sports">Sport</option>
           </select>
           <div class="simple">
-          <h3><a href="#airexplanation" rel="modal:open">Belüftung</a></h3>
+            <h3><a href="#airexplanation" rel="modal:open">Belüftung</a></h3>
             <div style="display: flex; justify-content: space-between; align-items: center; flex-shrink: 3;">
               <select id="airing" name="airing"">
                   <option value="very_bad">Sehr Schlecht Belüftet</option>
@@ -207,7 +207,7 @@
         <section id="second" class="main special">
           <div class="simple">
             <span class="simple">Berechnete Frischtluftmenge in m<sup>3</sup>/h (überschreibbar)</span>
-            <input type="number" name="usedQ" id="usedQ" value="" placeholder="" />
+            <input type="number" name="usedQ" id="usedQ" value="" placeholder="" min="1" max="3000" title="Frischluftmenge zwischen 1 und 3000"/>
           </div>
           <div id="chart" style="width: 100%; min-height: 70vh"></div>
           <select id="mode" name="mode">
