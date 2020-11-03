@@ -97,14 +97,18 @@
           <div class="spotlight">
             <div class="content">
               <p>
-                Zu Beginn betritt eine mit SARS-CoV-2 infizierte Person einen Raum. 
-                Der Raum wird entsprechend den verschiedenen Kategorien belüftet (von sehr schlecht bis sehr gut). 
+                Zu Beginn betritt eine mit SARS-CoV-2 infizierte, erwachsene Person einen Raum.
+                Der Raum wird entsprechend der verschiedenen Kategorien belüftet (von sehr schlecht bis sehr gut).
                 Es gehen zum gleichen Zeitpunkt die angegebene Anzahl von gesunden Personen ebenfalls in den Raum, 
                 oder sie befinden sich beim Betreten der infizierten Person bereits im Raum. 
                 Das ist für die Virenbelastung im Raum nicht relevant, da diese Personen alle gesund sind und 
                 nur die sich einstellende Virenlast entscheidend für das vorhergesagte Infektionsrisiko ist, 
                 die nur von der infizierten Person ausgeht. 
               </p>
+            <p>
+                Für die hier dargestellten Berechnungen wird immer von erwachsenen Personen ausgegangen. Zudem stellen die
+                angegebenen Werte das Infektionsrisiko dar, wenn keine der sich im Raum befindlichen Personen eine Maske trägt.
+            </p>
             </div>
           </div>
         </section>
@@ -161,7 +165,7 @@
               value="" placeholder="Volumen" />
             </div>
           </div>
-          <h3>Anzahl der gesunden Personen im Raum (zusätzlich zur infizierten Person)</h3>
+        <h3>Anzahl der gesunden, erwachsenen Personen im Raum (zusätzlich zur infizierten Person)</h3>
         <input type="number" title="Maximal 100 Personen" step="1" name="people" id="people" value="5" min="0" max="100"
             placeholder="Personenanzahl" />
           <h3>Aktivität</h3>
@@ -194,8 +198,9 @@
             <div class="spotlight">
               <div class="content">
                 <p>
-                  Infektionsrisiko bedeutet in dem hier betrachteten Zusammenhang das individuelle Risiko einer gesunden Person, 
-                  an Covid-19 zu erkranken. Es wird auf der linken Seite das Risiko in Prozent und auf der rechten 
+                Infektionsrisiko bedeutet in dem hier betrachteten Zusammenhang das individuelle Risiko einer gesunden, erwachsenen
+                Person,
+                an COVID-19 zu erkranken. Es wird auf der linken Seite das Risiko in Prozent und auf der rechten
                   Achse die Personenanzahl dargestellt, die sich sehr wahrscheinlich mit SARS-CoV-2 infizieren würden. 
                   Diese Anzahl wird aus dem Risiko in % und der Anzahl der gesunden Personen im Raum berechnet. 
                 </p>
@@ -244,7 +249,10 @@
                 dass der Raum durch die verschiedenen Einflüsse ideal durchmischt wird. 
               </p>
               <p>
-                Die Berechnungen basieren auf der gemeinsamen Veröffentlichung <a href="https://doi.org/10.1101/2020.10.08.20209106">Predicted Infection Risk for Aerosol Transmission of SARS-CoV-2</a> von Wissenschaftlern der Technischen Universität Berlin, der Charité, dem Robert-Koch-Institut und 
+                Die Berechnungen basieren auf der gemeinsamen Veröffentlichung <a
+                    href="https://doi.org/10.1101/2020.10.08.20209106">Predicted Infection Risk for Aerosol Transmission of
+                    SARS-CoV-2</a> von Wissenschaftler:innen der Technischen Universität Berlin, der Charité, dem Robert-Koch-Institut
+                und
                 einem Gesundheitsamt in Berlin.
               </p>
               <p>
