@@ -168,7 +168,7 @@
               value="" placeholder="Volumen" />
             </div>
           </div>
-        <h3>Anzahl der gesunden, erwachsenen Personen im Raum (zusätzlich zur infizierten Person)</h3>
+        <h3>Anzahl der erwachsenen Personen im Raum. Eine davon wird als Infiziert angenommen.</h3>
         <input type="number" title="Maximal 100 Personen" step="1" name="people" id="people" value="5" min="0" max="100"
             placeholder="Personenanzahl" />
           <h3>Aktivität</h3>
@@ -214,7 +214,7 @@
         <!-- Second Section -->
         <section id="second" class="main special">
           <div class="simple">
-            <span>Berechnete Frischtluftmenge in m<sup>3</sup>/h (überschreibbar)</span>
+            <span>Produkt aus personenbezogener Frischluftmenge und der Gesamtzahl anwesender Personen in m<sup>3</sup>/h (überschreibbar)</span>
             <input type="number" name="usedQ" id="usedQ" value="" placeholder="" min="1" max="6000" title="Frischluftmenge zwischen 1 und 6000"/>
           </div>
           <div class="expert" style="display:none">
@@ -271,6 +271,8 @@
        <footer id="footer">
         <p class="copyright">
             <a href="imprint.html">Impressum</a>
+            |
+            <a href="https://www.mcc.tu-berlin.de/">Tool-Entwicklung: Mobile Cloud Computing Research Group</a>
             |
             &copy;
             <a href="https://www.tu.berlin/en/">Technische Universität Berlin</a>
