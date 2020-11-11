@@ -3156,6 +3156,11 @@ table.alt tbody tr td {
   text-align: center;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.66);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row-reverse;
 }
 
 #header h1 {
