@@ -7,135 +7,202 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2280%22>🦠</text></svg>" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2280%22>🦠</text></svg>"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Modal Support -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"
+    />
     <!-- Tooltip Support -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
   </head>
   <body class="is-preload">
-
     <!-- Disclaimer Modal -->
-    <div id="disclaimer" class="modal" style="max-width: 1000px; text-align: center;">
+    <div
+      id="disclaimer"
+      class="modal"
+      style="max-width: 1000px; text-align: center"
+    >
       <p>
-        Dieses Tool kann dazu beitragen, das Infektionsrisiko über Aerosole in Innenräumen vorauszusagen. 
-        Die Berechnungen basieren auf der gemeinsamen Veröffentlichung <a
-            href="https://doi.org/10.1101/2020.10.08.20209106">Predicted Infection Risk for Aerosol Transmission of SARS-CoV-2
-            <svg width=".7em" height=".7em" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                <path fill-rule="evenodd"
-                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-            </svg></a> von Wissenschaftlern der Technischen Universität Berlin, der Charité, dem Robert-Koch-Institut und
-        einem Gesundheitsamt in Berlin. Die Berücksichtigung des Tragens einer Maske basiert allein auf den <a
-            href="http://dx.doi.org/10.14279/depositonce-10857">Untersuchungen des Hermann-Rietschel-Instituts der TU
-            Berlin <svg width=".7em" height=".7em" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                <path fill-rule="evenodd"
-                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-            </svg></a>.
+        Dieses Tool kann dazu beitragen, das Infektionsrisiko über Aerosole in
+        Innenräumen vorauszusagen. Die Berechnungen basieren auf der gemeinsamen
+        Veröffentlichung
+        <a href="https://doi.org/10.1101/2020.10.08.20209106"
+          >Predicted Infection Risk for Aerosol Transmission of SARS-CoV-2
+          <svg
+            width=".7em"
+            height=".7em"
+            viewBox="0 0 16 16"
+            class="bi bi-box-arrow-up-right"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+            /></svg
+        ></a>
+        von Wissenschaftlern der Technischen Universität Berlin, der Charité,
+        dem Robert-Koch-Institut und einem Gesundheitsamt in Berlin. Die
+        Berücksichtigung des Tragens einer Maske basiert allein auf den
+        <a href="http://dx.doi.org/10.14279/depositonce-10857"
+          >Untersuchungen des Hermann-Rietschel-Instituts der TU Berlin
+          <svg
+            width=".7em"
+            height=".7em"
+            viewBox="0 0 16 16"
+            class="bi bi-box-arrow-up-right"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+            /></svg></a
+        >.
       </p>
       <p>
-        Alle Angaben sind ohne Gewähr. Für die hier dargestellten vorausgesagten Infektionsrisiken wird keine Haftung übernommen. 
+        Alle Angaben sind ohne Gewähr. Für die hier dargestellten vorausgesagten
+        Infektionsrisiken wird keine Haftung übernommen.
       </p>
       <a class="button primary" href="#" rel="modal:close">Verstanden</a>
     </div>
 
     <!-- Air Modal -->
-    <div id="airexplanation" class="modal" style="max-width: 1000px; text-align: center;">
-        <p>
-            Die Beurteilung der Belüftung (von sehr schlecht bis sehr gut) werden nach den anerkannten Regeln der Technik 
-            in Abhängigkeit sämtlicher sich im Raum befindenden Personen bestimmt. 
-            Jede Person benötigt Frischluft (z.B. Sauerstoff) und verbraucht diese. 
-            Es entsteht Kohlendioxid (CO<sub>2</sub>), das in hohen Konzentrationen toxisch wirkt. 
-            Die Konzentration an CO<sub>2</sub> hängt von der Personenanzahl und der Frischluftmenge ab. 
-            Es werden folgende Frischluftmengen pro anwesende Person für die Bewertung angenommen, die dann auch zu den 
-            mitangegebenen CO<sub>2</sub> Konzentrationen im Raum resultieren. 
-        </p>
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Belüftung</th>
-                        <th>Frischluftmenge pro Person</th>
-                        <th>CO<sub>2</sub> Konzentration bei Sitzen/Stehen/Sprechen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sehr Schlecht</td>
-                        <td>10 m<sup>3</sup>/h</td>
-                        <td>2500 ppm</td>
-                    </tr>
-                    <tr>
-                        <td>Schlecht</td>
-                        <td>20 m<sup>3</sup>/h</td>
-                        <td>1500 ppm</td>
-                    </tr>
-                    <tr>
-                        <td>Mäßig</td>
-                        <td>30 m<sup>3</sup>/h</td>
-                        <td>1200 ppm</td>
-                    </tr>
-                    <tr>
-                        <td>Gut</td>
-                        <td>40 m<sup>3</sup>/h</td>
-                        <td>1000 ppm</td>
-                    </tr>
-                    <tr>
-                        <td>Sehr Gut</td>
-                        <td>60 m<sup>3</sup>/h</td>
-                        <td>800 ppm</td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-        <a class="button primary" href="#" rel="modal:close">OK</a>
+    <div
+      id="airexplanation"
+      class="modal"
+      style="max-width: 1000px; text-align: center"
+    >
+      <p>
+        Die Beurteilung der Belüftung (von sehr schlecht bis sehr gut) werden
+        nach den anerkannten Regeln der Technik in Abhängigkeit sämtlicher sich
+        im Raum befindenden Personen bestimmt. Jede Person benötigt Frischluft
+        (z.B. Sauerstoff) und verbraucht diese. Es entsteht Kohlendioxid
+        (CO<sub>2</sub>), das in hohen Konzentrationen toxisch wirkt. Die
+        Konzentration an CO<sub>2</sub> hängt von der Personenanzahl und der
+        Frischluftmenge ab. Es werden folgende Frischluftmengen pro anwesende
+        Person für die Bewertung angenommen, die dann auch zu den mitangegebenen
+        CO<sub>2</sub> Konzentrationen im Raum resultieren.
+      </p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Belüftung</th>
+              <th>Frischluftmenge pro Person</th>
+              <th>CO<sub>2</sub> Konzentration bei Sitzen/Stehen/Sprechen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sehr Schlecht</td>
+              <td>10 m<sup>3</sup>/h</td>
+              <td>2500 ppm</td>
+            </tr>
+            <tr>
+              <td>Schlecht</td>
+              <td>20 m<sup>3</sup>/h</td>
+              <td>1500 ppm</td>
+            </tr>
+            <tr>
+              <td>Mäßig</td>
+              <td>30 m<sup>3</sup>/h</td>
+              <td>1200 ppm</td>
+            </tr>
+            <tr>
+              <td>Gut</td>
+              <td>40 m<sup>3</sup>/h</td>
+              <td>1000 ppm</td>
+            </tr>
+            <tr>
+              <td>Sehr Gut</td>
+              <td>60 m<sup>3</sup>/h</td>
+              <td>800 ppm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a class="button primary" href="#" rel="modal:close">OK</a>
     </div>
-
-
 
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
-      <header id="header" style="background-color:white; margin-top: 50px">
-        <img src="assets/tu.svg" style="height:100px; float:left; padding: 10px;">
-        <h1 style="display:inline-block; color:black; text-shadow:0px 0px"><a href="https://hri-pira.github.io" style="border: none; color:black">COVID-19 Infektionsrisiko durch Aerosole</a></h1>
+      <header id="header" style="background-color: white; margin-top: 50px">
+        <img
+          src="assets/tu.svg"
+          style="height: 100px; float: left; padding: 10px"
+        />
+        <h1 style="display: inline-block; color: black; text-shadow: 0px 0px">
+          <a
+            href="https://hri-pira.github.io"
+            style="border: none; color: black"
+            >COVID-19 Infektionsrisiko durch Aerosole</a
+          >
+        </h1>
       </header>
 
       <!-- Main -->
       <div id="main">
-
         <!-- First Section -->
         <section id="intro" class="main">
           <div class="spotlight">
             <div class="content">
               <p>
-                Zu Beginn betritt eine mit SARS-CoV-2 infizierte, erwachsene Person einen Raum.
-                Der Raum wird entsprechend der verschiedenen Kategorien belüftet (von sehr schlecht bis sehr gut).
-                Es gehen zum gleichen Zeitpunkt die angegebene Anzahl von gesunden Personen ebenfalls in den Raum, 
-                oder sie befinden sich beim Betreten der infizierten Person bereits im Raum. 
-                Das ist für die Virenbelastung im Raum nicht relevant, da diese Personen alle gesund sind und 
-                nur die sich einstellende Virenlast entscheidend für das vorhergesagte Infektionsrisiko ist, 
-                die nur von der infizierten Person ausgeht. 
+                Zu Beginn betritt eine mit SARS-CoV-2 infizierte, erwachsene
+                Person einen Raum. Der Raum wird entsprechend der verschiedenen
+                Kategorien belüftet (von sehr schlecht bis sehr gut). Es gehen
+                zum gleichen Zeitpunkt die angegebene Anzahl von gesunden
+                Personen ebenfalls in den Raum, oder sie befinden sich beim
+                Betreten der infizierten Person bereits im Raum. Das ist für die
+                Virenbelastung im Raum nicht relevant, da diese Personen alle
+                gesund sind und nur die sich einstellende Virenlast entscheidend
+                für das vorhergesagte Infektionsrisiko ist, die nur von der
+                infizierten Person ausgeht.
               </p>
-            <p>
-                Für die hier dargestellten Berechnungen wird immer von erwachsenen Personen ausgegangen. Zudem stellen die
-                angegebenen Werte das Infektionsrisiko dar, wenn die AHA Regeln eingehalten werden. Die Berücksichtigung des Tragens
-                einer Maske basiert allein auf den <a href="http://dx.doi.org/10.14279/depositonce-10857">Untersuchungen des
-                    Hermann-Rietschel-Instituts der TU Berlin <svg width=".7em" height=".7em" viewBox="0 0 16 16"
-                        class="bi bi-box-arrow-up-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                        <path fill-rule="evenodd"
-                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                    </svg></a>.
-            </p>
+              <p>
+                Für die hier dargestellten Berechnungen wird immer von
+                erwachsenen Personen ausgegangen. Zudem stellen die angegebenen
+                Werte das Infektionsrisiko dar, wenn die AHA Regeln eingehalten
+                werden. Die Berücksichtigung des Tragens einer Maske basiert
+                allein auf den
+                <a href="http://dx.doi.org/10.14279/depositonce-10857"
+                  >Untersuchungen des Hermann-Rietschel-Instituts der TU Berlin
+                  <svg
+                    width=".7em"
+                    height=".7em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-box-arrow-up-right"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                    /></svg></a
+                >.
+              </p>
             </div>
           </div>
         </section>
@@ -188,16 +255,31 @@
             </div>
             <div class="col-3 col-12-xsmall">
               <span>Volumen in m<sup>3</sup></span>
-            <input type="number" title="Das Raumvolumen wird automatisch berechnet" name="volume" id="volume" readonly="readonly
-              value="" placeholder="Volumen" style="background-color:#DCDCDC"/>
+              <input type="number" title="Das Raumvolumen wird automatisch
+              berechnet" name="volume" id="volume" readonly="readonly value=""
+              placeholder="Volumen" style="background-color:#DCDCDC"/>
             </div>
           </div>
-        <h3>Anzahl der erwachsenen Personen im Raum. Eine davon wird als infiziert angenommen.</h3>
-        <input type="number" title="Maximal 100 Personen" step="1" name="people" id="people" value="5" min="0" max="100"
-            placeholder="Personenanzahl" />
+          <h3>
+            Anzahl der erwachsenen Personen im Raum. Eine davon wird als
+            infiziert angenommen.
+          </h3>
+          <input
+            type="number"
+            title="Maximal 100 Personen"
+            step="1"
+            name="people"
+            id="people"
+            value="5"
+            min="0"
+            max="100"
+            placeholder="Personenanzahl"
+          />
           <h3>Aktivität</h3>
           <select id="activity" name="activity">
-            <option value="low_activity" selected="selected">Sitzen, Stehen oder Sprechen</option>
+            <option value="low_activity" selected="selected">
+              Sitzen, Stehen oder Sprechen
+            </option>
             <option value="singing">Singen</option>
             <option value="mid_activity">Physische Arbeit</option>
             <option value="sports">Sport</option>
@@ -215,63 +297,122 @@
             </div>
             <div class="col-6 col-12-xsmall">
               <select id="maskPosition" name="maskPosition">
-                <option value="tight" selected="selected">Rundherum eng anliegend</option>
+                <option value="tight" selected="selected">
+                  Rundherum eng anliegend
+                </option>
                 <option value="loose">Lockerer Sitz</option>
               </select>
             </div>
           </div>
           <div class="simple">
             <h3><a href="#airexplanation" rel="modal:open">Belüftung</a></h3>
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-shrink: 3;">
-              <select id="airing" name="airing"">
-                  <option value="very_bad">Sehr Schlecht Belüftet</option>
-                  <option value="bad">Schlecht Belüftet</option>
-                  <option value="ok">Mäßig Belüftet</option>
-                  <option value="good" selected="selected">Gut Belüftet</option>
-                  <option value="very_good">Sehr gut Belüftet</option>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-shrink: 3;
+              "
+            >
+              <select id="airing" name="airing">
+                <option value="very_bad">Sehr Schlecht Belüftet</option>
+                <option value="bad">Schlecht Belüftet</option>
+                <option value="ok">Mäßig Belüftet</option>
+                <option value="good" selected="selected">Gut Belüftet</option>
+                <option value="very_good">Sehr gut Belüftet</option>
               </select>
-              <a href="#airexplanation" rel="modal:open" style="margin: 10px;border-bottom: none"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
-                  <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                  <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
-                  <circle cx="8" cy="4.5" r="1"/>
-                </svg></a>
+              <a
+                href="#airexplanation"
+                rel="modal:open"
+                style="margin: 10px; border-bottom: none"
+                ><svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-info-circle"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  />
+                  <path
+                    d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"
+                  />
+                  <circle cx="8" cy="4.5" r="1" /></svg
+              ></a>
             </div>
           </div>
           <div class="simple">
             <h3>Frischluftmenge in m<sup>3</sup>/h</h3>
-            <span>Produkt aus personenbezogener Frischluftmenge durch Belüftung und der Gesamtzahl anwesender Personen </span>
-            <input type="number" readonly="readonly name="isQ" id="isQ" value="" title="Produkt wird automatisch berechnet" style="background-color:#DCDCDC"/>
-            <span>Zusätzlichen verfügbare Menge virenfreier Luft (z.B. durch Einsatz von Luftreinigern)</span>
-            <input type="number" name="addQ" id="addQ" value="0" placeholder="" min="0" max="5000" step="50" title="Zusätzliche virenfreie Luft zwischen 0 und 5000"/>
+            <span
+              >Produkt aus personenbezogener Frischluftmenge durch Belüftung und
+              der Gesamtzahl anwesender Personen
+            </span>
+            <input type="number" readonly="readonly name="isQ" id="isQ" value=""
+            title="Produkt wird automatisch berechnet"
+            style="background-color:#DCDCDC"/>
+            <span
+              >Zusätzlichen verfügbare Menge virenfreier Luft (z.B. durch
+              Einsatz von Luftreinigern)</span
+            >
+            <input
+              type="number"
+              name="addQ"
+              id="addQ"
+              value="0"
+              placeholder=""
+              min="0"
+              max="5000"
+              step="50"
+              title="Zusätzliche virenfreie Luft zwischen 0 und 5000"
+            />
             <span>Gesamte virenfreie Zugluft</span>
-            <input type="number" readonly="readonly name="usedQ" id="usedQ" title="Gesamtmenge wird automatisch berechnet" style="background-color:#DCDCDC"/>
+            <input type="number" readonly="readonly name="usedQ" id="usedQ"
+            title="Gesamtmenge wird automatisch berechnet"
+            style="background-color:#DCDCDC"/>
           </div>
-          <div class="expert" style="display:none">
-            <h3>Maximale Frischtluftmenge in m<sup>3</sup>/h (überschreibbar)</h3>
-            <input type="number" name="maxQ" id="maxQ" value="" placeholder="" min="100" max="6000" step="100" title="Frischluftmenge zwischen 100 und 6000"/>
+          <div class="expert" style="display: none">
+            <h3>
+              Maximale Frischtluftmenge in m<sup>3</sup>/h (überschreibbar)
+            </h3>
+            <input
+              type="number"
+              name="maxQ"
+              id="maxQ"
+              value=""
+              placeholder=""
+              min="100"
+              max="6000"
+              step="100"
+              title="Frischluftmenge zwischen 100 und 6000"
+            />
           </div>
         </section>
 
         <section id="explainer" class="main">
-            <div class="spotlight">
-              <div class="content">
-                <p>
-                Infektionsrisiko bedeutet in dem hier betrachteten Zusammenhang das individuelle Risiko einer gesunden, erwachsenen
-                Person,
-                an COVID-19 zu erkranken. Es wird auf der linken Seite das Risiko in Prozent und auf der rechten
-                  Achse die Personenanzahl dargestellt, die sich sehr wahrscheinlich mit SARS-CoV-2 infizieren würden. 
-                  Diese Anzahl wird aus dem Risiko in % und der Anzahl der gesunden Personen im Raum berechnet. 
-                </p>
-              </div>
+          <div class="spotlight">
+            <div class="content">
+              <p>
+                Infektionsrisiko bedeutet in dem hier betrachteten Zusammenhang
+                das individuelle Risiko einer gesunden, erwachsenen Person, an
+                COVID-19 zu erkranken. Es wird auf der linken Seite das Risiko
+                in Prozent und auf der rechten Achse die Personenanzahl
+                dargestellt, die sich sehr wahrscheinlich mit SARS-CoV-2
+                infizieren würden. Diese Anzahl wird aus dem Risiko in % und der
+                Anzahl der gesunden Personen im Raum berechnet.
+              </p>
             </div>
-          </section>
+          </div>
+        </section>
 
         <!-- Second Section -->
         <section id="second" class="main special">
           <div id="chart" style="width: 100%; min-height: 70vh"></div>
           <select id="mode" name="mode">
-              <option value="simple">Einfache Darstellung</option>
-              <option value="expert">Experten Darstellung</option>
+            <option value="simple">Einfache Darstellung</option>
+            <option value="expert">Experten Darstellung</option>
           </select>
           <!-- <select class="expert" id="vistype" name="vistype" style="display:none">
             <option value="contour">Statische Visualisierung</option>
@@ -287,39 +428,73 @@
                 <h2>Erläuterungen</h2>
               </header>
               <p>
-                Die virenbeladenen Partikel aus den Atemwegen der infizierten Person verteilen sich unmittelbar im gesamten Raum. 
-                Diese Annahme kann getroffen werden, weil sich derartige Schwebteilchen in kurzer Zeit (in ein paar Minuten) 
-                überall im Raum verteilen. In Realität schweben die luftgetragenen Partikel (inkl. der anhaftenden Viren) 
-                in Abhängigkeit der Raumluftströmung sehr unterschiedlich und es entstehen Gebiete, die weniger Virenlast als andere haben. 
+                Die virenbeladenen Partikel aus den Atemwegen der infizierten
+                Person verteilen sich unmittelbar im gesamten Raum. Diese
+                Annahme kann getroffen werden, weil sich derartige
+                Schwebteilchen in kurzer Zeit (in ein paar Minuten) überall im
+                Raum verteilen. In Realität schweben die luftgetragenen Partikel
+                (inkl. der anhaftenden Viren) in Abhängigkeit der
+                Raumluftströmung sehr unterschiedlich und es entstehen Gebiete,
+                die weniger Virenlast als andere haben.
               </p>
               <p>
-                Die dem Raum zugeführte virenfreie Luft vermischt sich unmittelbar mit der Raumluft und verteilt sich im gesamten Raum. 
-                Diese Annahme ist sehr vereinfacht. In der Realität stellt sich in Abhängigkeit von sehr vielen Faktoren 
-                eine Raumluftströmung ein, die nicht stabil ist. In dem betrachteten Fall wird davon ausgegangen, 
-                dass der Raum durch die verschiedenen Einflüsse ideal durchmischt wird. 
+                Die dem Raum zugeführte virenfreie Luft vermischt sich
+                unmittelbar mit der Raumluft und verteilt sich im gesamten Raum.
+                Diese Annahme ist sehr vereinfacht. In der Realität stellt sich
+                in Abhängigkeit von sehr vielen Faktoren eine Raumluftströmung
+                ein, die nicht stabil ist. In dem betrachteten Fall wird davon
+                ausgegangen, dass der Raum durch die verschiedenen Einflüsse
+                ideal durchmischt wird.
               </p>
               <p>
-                Die Berechnungen basieren auf der gemeinsamen Veröffentlichung <a
-                    href="https://doi.org/10.1101/2020.10.08.20209106">Predicted Infection Risk for Aerosol Transmission of
-                    SARS-CoV-2 <svg width=".7em" height=".7em" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                        <path fill-rule="evenodd"
-                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                    </svg></a> von Wissenschaftler:innen der Technischen Universität Berlin, der Charité, dem Robert-Koch-Institut und
-                    einem Gesundheitsamt in Berlin. Die Berücksichtigung des Tragens einer Maske basiert allein auf den <a
-                        href="http://dx.doi.org/10.14279/depositonce-10857">Untersuchungen des Hermann-Rietschel-Instituts der TU
-                        Berlin <svg width=".7em" height=".7em" viewBox="0 0 16 16" class="bi bi-box-arrow-up-right" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                            <path fill-rule="evenodd"
-                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                        </svg></a>.
+                Die Berechnungen basieren auf der gemeinsamen Veröffentlichung
+                <a href="https://doi.org/10.1101/2020.10.08.20209106"
+                  >Predicted Infection Risk for Aerosol Transmission of
+                  SARS-CoV-2
+                  <svg
+                    width=".7em"
+                    height=".7em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-box-arrow-up-right"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                    /></svg
+                ></a>
+                von Wissenschaftler:innen der Technischen Universität Berlin,
+                der Charité, dem Robert-Koch-Institut und einem Gesundheitsamt
+                in Berlin. Die Berücksichtigung des Tragens einer Maske basiert
+                allein auf den
+                <a href="http://dx.doi.org/10.14279/depositonce-10857"
+                  >Untersuchungen des Hermann-Rietschel-Instituts der TU Berlin
+                  <svg
+                    width=".7em"
+                    height=".7em"
+                    viewBox="0 0 16 16"
+                    class="bi bi-box-arrow-up-right"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+                    /></svg></a
+                >.
               </p>
               <p>
-                Alle Angaben sind ohne Gewähr. Für die hier dargestellten vorausgesagten Infektionsrisiken wird keine Haftung übernommen. 
+                Alle Angaben sind ohne Gewähr. Für die hier dargestellten
+                vorausgesagten Infektionsrisiken wird keine Haftung übernommen.
               </p>
               <p></p>
             </div>
@@ -327,21 +502,26 @@
         </section>
       </div>
 
-       <!-- Footer -->
-       <footer id="footer">
+      <!-- Footer -->
+      <footer id="footer">
         <p class="copyright">
-            <a href="imprint.html">Impressum</a>
-            |
-            <a href="https://www.mcc.tu-berlin.de/">Tool-Entwicklung: Mobile Cloud Computing Research Group</a>
-            |
-            &copy;
-            <a href="https://www.tu.berlin/en/">Technische Universität Berlin</a>
-            2020.
+          <a href="imprint.html">Impressum</a>
+          |
+          <a href="https://www.mcc.tu-berlin.de/"
+            >Tool-Entwicklung: Mobile Cloud Computing Research Group</a
+          >
+          | &copy;
+          <a href="https://www.tu.berlin/en/">Technische Universität Berlin</a>
+          2020.
         </p>
-    </footer>
+      </footer>
     </div>
 
-    <script data-goatcounter="https://hri-pira.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script
+      data-goatcounter="https://hri-pira.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
     <script src="https://cdn.plot.ly/plotly-1.56.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <!-- Modal Support -->
@@ -351,15 +531,14 @@
     <!-- Our own bundle -->
     <script src="bundle.js"></script>
     <script>
-                                                                                            $(function () {
-                                                                                                $(document).tooltip();
-                                                                                            });
-      $('#disclaimer').modal({
+      $(function () {
+        $(document).tooltip();
+      });
+      $("#disclaimer").modal({
         escapeClose: false,
         clickClose: false,
-        showClose: false
+        showClose: false,
       });
-
     </script>
   </body>
 </html>
